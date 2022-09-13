@@ -3,6 +3,10 @@
 @section("title", "Admin index")
 
 @section("main-content")
+
+    <h2>
+        Welcome Admin!
+    </h2>
     <table>
         <thead>
             <td>ID</td>
@@ -26,7 +30,7 @@
                     {{ $comic->series }}
                 </td>
                 <td>
-                    {{ $comic->price }}
+                    {{ $comic->price }} €
                 </td>
                 <td>
                     {{ $comic->sale_date }}

@@ -14,7 +14,7 @@
             </h3>
             <h4>
                 {{ $comic->series }} <br>
-                Price: {{ $comic->price }}
+                Price: {{ $comic->price }} €
             </h4>
 
             <p>

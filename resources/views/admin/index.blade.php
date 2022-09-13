@@ -5,7 +5,7 @@
 @section("main-content")
 
     <h2>
-        Welcome Admin!
+        Welcome back Admin!
     </h2>
     <table>
         <thead>

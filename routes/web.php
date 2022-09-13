@@ -13,10 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function() {
-    $comics = Comic::all();
-    return view("guest.home", compact("comics"));
-})->name("guest.home");
+Route::get('/', "HomeController@index")->name("guest.home");
 
 Route::get('/admin', "ComicController@index")->name("admin.index");
 

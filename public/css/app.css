@@ -6,6 +6,15 @@ header {
 main {
   max-width: 80%;
   margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main div.comic-card {
+  height: 1000px;
+  width: 700px;
+  border: 5px solid black;
 }
 
 main table {

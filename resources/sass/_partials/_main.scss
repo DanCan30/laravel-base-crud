@@ -6,16 +6,11 @@ main {
     align-items: center;
     flex-direction: column;
 
+    // ADMIN TABLE
     h2 {
         font-size: 2rem;
         text-align: center;
         margin-bottom: 1rem;
-    }
-
-    div.comic-card {
-        height: 1000px;
-        width: 700px;
-        border: 5px solid black;
     }
 
     table {
@@ -56,4 +51,44 @@ main {
             }
         }
     }
+
+    // COMIC CARD
+
+    
+    div.comic-card {
+        height: 1000px;
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3rem;
+        box-shadow: 1rem 0 1rem grey, -1rem 0 1rem grey;
+
+        .comic-thumb-container {
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+
+            img {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+            font-style: italic;
+            margin-top: 3rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            padding: 1rem 3rem;
+        }
+
+        p {
+            padding-inline: 3rem;;
+        }
+    }
+
 }

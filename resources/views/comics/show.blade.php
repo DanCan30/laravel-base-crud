@@ -3,6 +3,7 @@
 @section("title", $comic->title)
 
 @section("main-content")
+
     <div class="comic-card">
         <div class="comic-thumb-container">
             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}' thumbnail">
@@ -12,10 +13,8 @@
                 {{ $comic->title }}
             </h3>
             <h4>
-                {{ $comic->series }}
-            </h4>
-            <h4>
-                {{ $comic->price }}
+                {{ $comic->series }} <br>
+                Price: {{ $comic->price }}
             </h4>
 
             <p>
@@ -23,4 +22,5 @@
             </p>
         </div>
     </div>
+
 @endsection

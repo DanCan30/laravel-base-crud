@@ -50,7 +50,7 @@ class ComicController extends Controller
 
         $comic = Comic::Where("slug", $slug)->first();
 
-        return view("comics.show", compact("comic"));
+        return view("guest.show", compact("comic"));
     }
 
     /**

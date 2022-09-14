@@ -7,6 +7,9 @@
     <h2>
         Welcome back Admin!
     </h2>
+    <div class="add-button-container">
+        <a href="{{ route("comics.create") }}">Add</a>
+    </div>
     <table>
         <thead>
             <td>ID</td>
@@ -22,7 +25,7 @@
                     {{ $comic->id }}
                 </td>
                 <td>
-                    <a href="{{ route("comic.show", $comic->slug) }}">
+                    <a href="{{ route("comics.show", $comic->slug) }}">
                         {{ $comic->title }}
                     </a>
                 </td>

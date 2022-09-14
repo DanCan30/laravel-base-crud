@@ -13,7 +13,7 @@
         @forelse ($comics as $comic)
             
             <div class="comic-mini-card">
-                <a href="{{ route("comic.show", $comic->slug) }}">
+                <a href="{{ route("comics.show", $comic->slug) }}">
 
                     <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                     <h3>
@@ -31,6 +31,6 @@
 
 @section("admin")
     <div class="admin-button">
-        <a href="{{ route("admin.index") }}">Are you an admin? Click here to show the admin screen.</a>
+        <a href="{{ route("comics.index") }}">Are you an admin? Click here to show the admin screen.</a>
     </div>    
 @endsection 

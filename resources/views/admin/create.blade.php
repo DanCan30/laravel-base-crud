@@ -3,33 +3,34 @@
 @section("title", "Add a new comic")
 
 @section("main-content")
-    
+    <h2>Add a new comic</h2>
+
     <form action="{{ route("comics.store") }}" method="POST">
         @csrf
         
         <label for="title-input">Title</label>
-        <input type="text" name="title" id="title-input">
+        <input required type="text" name="title" id="title-input">
 
         <label for="description-input">Description</label>
-        <textarea type="text" name="description" id="description-input">
+        <textarea required type="text" name="description" id="description-input">
         </textarea>
         
         <label for="thumb-input">Thumb</label>
-        <input type="text" name="thumb" id="thumb-input">
+        <input required type="text" name="thumb" id="thumb-input">
         
         <label for="price-input">Price</label>
-        <input type="text" name="price" id="price-input">
+        <input required type="text" name="price" id="price-input">
         
         <label for="series-input">Series</label>
-        <input type="text" name="series" id="series-input">
+        <input required type="text" name="series" id="series-input">
         
         <label for="sale-date-input">Sale Date</label>
-        <input type="date" name="sale_date" id="sale-date-input">
+        <input required type="date" name="sale_date" id="sale-date-input">
         
         <label for="type-input">Type</label>
-        <select name="type" id="type-input">
-            <option value="graphic novel">graphic novel</option>
-            <option value="comic book">comic book</option>
+        <select required name="type" id="type-input">
+            <option value="comic book">Comic book</option>
+            <option value="graphic novel">Graphic novel</option>
         </select>
 
         <input type="submit" value="Add">

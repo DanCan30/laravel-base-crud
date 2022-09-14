@@ -147,6 +147,46 @@ main div.comic-card p {
   padding-inline: 3rem;
 }
 
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+main form label {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+main form input {
+  font-size: 1.5rem;
+}
+
+main form input[type=submit] {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+main form input[type=submit]:hover {
+  background-color: rgb(0, 189, 0);
+}
+
+main form textarea {
+  resize: none;
+  font-size: 1.5rem;
+}
+
+main form select {
+  font-size: 1.5rem;
+}
+
 div.admin-button {
   padding-left: 2rem;
 }

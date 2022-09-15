@@ -92,6 +92,7 @@ class ComicController extends Controller
     {
         $editedData = $request->all();
         $selectedComic = Comic::Where("slug", $slug)->firstOrFail();
+        $selectedComic["slug"] = Str::slug($editedData["sale_date"] . " " . $editedData["title"], '-');
         $selectedComic->update($editedData);
 
         return redirect()->route("comics.show", $selectedComic->slug);

@@ -40,7 +40,9 @@
                 </td>
                 <td>
                     <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
-                    <a href="">Delete</a>
+                    <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST">@csrf @method("DELETE")
+                    <button type="submit">Delete</button>
+                </form>
                 </td>
             </tr>
             @empty

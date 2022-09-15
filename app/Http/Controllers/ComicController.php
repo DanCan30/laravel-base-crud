@@ -105,8 +105,11 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-        //
+        $selectedComic = Comic::Where("slug", $slug)->firstOrFail();
+        $selectedComic->delete();
+
+        return redirect()->route("comics.index");
     }
 }

@@ -95,7 +95,7 @@ class ComicController extends Controller
         $selectedComic["slug"] = Str::slug($editedData["sale_date"] . " " . $editedData["title"], '-');
         $selectedComic->update($editedData);
 
-        return redirect()->route("comics.show", $selectedComic->slug);
+        return redirect()->route("comics.index", $selectedComic->slug);
 
     }
 

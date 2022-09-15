@@ -38,6 +38,7 @@
             <td>Series</td>
             <td>Price</td>
             <td>Sales started</td>
+            <td></td>
         </thead>
         <tbody>
             @forelse ($comics as $comic)
@@ -60,7 +61,7 @@
                     {{ $comic->sale_date }}
                 </td>
                 <td>
-                    <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
+                    <a href="{{ route("comics.edit", $comic->slug) }}" class="edit-element-button">Edit</a>
                     <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST" class="delete-element-button">
                         @csrf @method("DELETE")
                         <button type="submit">Delete</button>

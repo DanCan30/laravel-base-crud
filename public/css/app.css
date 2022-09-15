@@ -62,17 +62,22 @@ main div.add-button-container a {
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem 2rem;
+  margin-right: 10rem;
   border-radius: 0.5rem;
-  background-color: green;
+  border: 3px solid transparent;
+  background-color: rgb(0, 189, 0);
+  transition: 0.4s;
 }
 
 main div.add-button-container a:hover {
-  background-color: rgb(0, 189, 0);
+  border: 3px solid rgb(0, 189, 0);
+  background-color: green;
 }
 
 main table {
   width: 100%;
   background-color: white;
+  border-collapse: collapse;
 }
 
 main table thead {
@@ -83,6 +88,10 @@ main table thead td {
   padding: 0.5rem 1rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+main table thead td:last-child {
+  background-color: whitesmoke;
 }
 
 main table tbody tr:nth-child(odd) {
@@ -97,9 +106,51 @@ main table tbody tr td {
   padding: 0.75rem;
 }
 
+main table tbody tr td:last-child {
+  display: flex;
+  background-color: whitesmoke;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
 main table tbody tr td a {
   color: black;
   text-decoration: none;
+}
+
+main table tbody tr td a.edit-element-button,
+main table tbody tr td button {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+main table tbody tr td a.edit-element-button {
+  text-decoration: none;
+  background-color: rgb(56, 166, 199);
+  transition: 0.4s;
+  border: 3px solid transparent;
+}
+
+main table tbody tr td a.edit-element-button:hover {
+  background-color: rgb(43, 110, 131);
+  border: 3px solid rgb(56, 166, 199);
+}
+
+main table tbody tr td button {
+  border: none;
+  background-color: rgb(214, 61, 34);
+  cursor: pointer;
+  transition: 0.4s;
+  border: 3px solid transparent;
+}
+
+main table tbody tr td button:hover {
+  background-color: rgb(150, 43, 24);
+  border: 3px solid rgb(214, 61, 34);
 }
 
 main .comics-container {
@@ -128,6 +179,48 @@ main .comics-container .comic-mini-card a {
 
 main .comics-container .comic-mini-card a:hover {
   border: 1px solid grey;
+}
+
+main div.show-buttons-container {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+main div.show-buttons-container a,
+main div.show-buttons-container button {
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+main div.show-buttons-container a {
+  text-decoration: none;
+  background-color: rgb(56, 166, 199);
+  transition: 0.4s;
+  border: 3px solid transparent;
+}
+
+main div.show-buttons-container a:hover {
+  background-color: rgb(43, 110, 131);
+  border: 3px solid rgb(56, 166, 199);
+}
+
+main div.show-buttons-container button {
+  border: none;
+  background-color: rgb(214, 61, 34);
+  cursor: pointer;
+  transition: 0.4s;
+  border: 3px solid transparent;
+}
+
+main div.show-buttons-container button:hover {
+  background-color: rgb(150, 43, 24);
+  border: 3px solid rgb(214, 61, 34);
 }
 
 main div.comic-card {

@@ -3,12 +3,13 @@
 @section("title", $comic->title)
 
 @section("main-content")
-
-    <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
-    <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST" class="delete-element-button">
-        @csrf @method("DELETE")
-        <button type="submit">Delete</button>
-    </form>
+    <div class="show-buttons-container">
+        <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
+        <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST" class="delete-element-button">
+            @csrf @method("DELETE")
+            <button type="submit">Delete</button>
+        </form>
+    </div>
 
     <div class="comic-card">
         <div class="comic-thumb-container">

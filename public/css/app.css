@@ -161,6 +161,7 @@ main form label {
 
 main form input {
   font-size: 1.5rem;
+  width: 50rem;
 }
 
 main form input[type=submit] {

@@ -67,6 +67,7 @@ main {
                     }
                     
                 }
+
             }
         }
     }
@@ -138,7 +139,7 @@ main {
         }
     }
 
-    // CREATE FORM
+    // CREATE/EDIT FORM
 
     form {
         display: flex;
@@ -153,6 +154,7 @@ main {
 
         input {
             font-size: 1.5rem;
+            width: 50rem;
 
             &[type="submit"] {
                 display: inline-block;

@@ -38,6 +38,10 @@
                 <td>
                     {{ $comic->sale_date }}
                 </td>
+                <td>
+                    <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
+                    <a href="">Delete</a>
+                </td>
             </tr>
             @empty
                 <h2>

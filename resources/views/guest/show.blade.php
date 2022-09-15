@@ -5,7 +5,7 @@
 @section("main-content")
 
     <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
-    <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST">
+    <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST" class="delete-element-button">
         @csrf @method("DELETE")
         <button type="submit">Delete</button>
     </form>
@@ -29,4 +29,23 @@
         </div>
     </div>
 
+@endsection
+
+@section("scripts")
+    <script>
+
+        const deleteElement = document.querySelector(".delete-element-button");
+            
+            deleteElement.addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const response = window.confirm("Your choice can't be reverted. Are you sure you want to delete this record?");
+                if (response) {
+                    this.submit();
+                }    
+            })
+
+    </script>
+    
 @endsection

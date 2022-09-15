@@ -61,7 +61,7 @@
                 </td>
                 <td>
                     <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
-                    <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST">
+                    <form action="{{ route("comics.destroy", $comic->slug) }}" method="POST" class="delete-element-button">
                         @csrf @method("DELETE")
                         <button type="submit">Delete</button>
                     </form>
@@ -74,4 +74,29 @@
             @endforelse
         </tbody>
     </table>
+@endsection
+
+@section("scripts")
+    <script>
+
+        const deleteElement = document.querySelectorAll(".delete-element-button");
+
+        deleteElement.forEach(element=> {
+            
+            element.addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const response = window.confirm("Your choice can't be reverted. Are you sure you want to delete this record?");
+                if (response) {
+                    element.submit();
+                } 
+                    
+            })
+        }
+
+        )
+
+    </script>
+    
 @endsection

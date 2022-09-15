@@ -4,6 +4,8 @@
 
 @section("main-content")
 
+    <a href="{{ route("comics.edit", $comic->slug) }}">Edit</a>
+
     <div class="comic-card">
         <div class="comic-thumb-container">
             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}' thumbnail">

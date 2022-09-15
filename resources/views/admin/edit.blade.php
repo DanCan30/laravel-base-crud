@@ -1,13 +1,13 @@
 @extends("layouts.main")
 
-@section("title", "Add a new comic")
+@section("title", "Edit a comic")
 
 @section("main-content")
-    <h2>Add a new comic</h2>
+    <h2>Edit a comic</h2>
 
     <form action="{{ route("comics.update", $comic->slug) }}" method="POST">
         @csrf
-        @method("PUT");
+        @method("PUT")
         
         <label for="title-input">Title</label>
         <input required type="text" name="title" id="title-input" value="{{ $comic->title }}">

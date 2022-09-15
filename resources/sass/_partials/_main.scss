@@ -13,6 +13,23 @@ main {
         margin-bottom: 1rem;
     }
 
+    div.element-changed {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        padding-block: .75rem;
+
+        &.removed {
+            background-color: rgb(233, 94, 94);
+        }
+        &.updated {
+            background-color: rgb(88, 185, 241);
+        }
+        &.added {
+            background-color: rgb(100, 197, 133);
+        }
+    }
+
     div.add-button-container {
         align-self: flex-end;
         padding-block: 2rem;

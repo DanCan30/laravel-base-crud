@@ -32,6 +32,25 @@ main h2 {
   margin-bottom: 1rem;
 }
 
+main div.element-changed {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  padding-block: 0.75rem;
+}
+
+main div.element-changed.removed {
+  background-color: rgb(233, 94, 94);
+}
+
+main div.element-changed.updated {
+  background-color: rgb(88, 185, 241);
+}
+
+main div.element-changed.added {
+  background-color: rgb(100, 197, 133);
+}
+
 main div.add-button-container {
   align-self: flex-end;
   padding-block: 2rem;

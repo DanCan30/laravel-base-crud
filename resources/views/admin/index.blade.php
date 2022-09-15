@@ -7,6 +7,27 @@
     <h2>
         Welcome back Admin!
     </h2>
+
+
+    @if ( session("deleted") )
+
+        <div class="element-changed removed">
+            The comic "{{ session("deleted") }}" has been removed succesfully.
+        </div>
+
+    @elseif ( session("updated") )
+    
+        <div class="element-changed updated">
+            The comic "{{ session("updated") }}" has been updated succesfully.
+        </div>
+    @elseif ( session("added") )
+        
+        <div class="element-changed added">
+            The comic "{{ session("added") }}" has been added succesfully.
+        </div>
+    @endif
+
+
     <div class="add-button-container">
         <a href="{{ route("comics.create") }}">Add</a>
     </div>

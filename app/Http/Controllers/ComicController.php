@@ -60,7 +60,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view("admin.create");
+        $comic = new Comic;
+        return view("admin.create", compact("comic"));
     }
 
     /**
@@ -74,8 +75,7 @@ class ComicController extends Controller
         $validatedData = $request->validate($this->validationRules, $this->validationErrorMessages);
 
         $newComic = new Comic();
-        $data = $request->all();
-        $newComic->fill($data);
+        $newComic->fill($validatedData);
         $newComic["slug"] = Str::slug($request["sale_date"] . " " . $request["title"], '-');
         $newComic->save();
 
@@ -121,10 +121,9 @@ class ComicController extends Controller
     {
         $validatedData = $request->validate($this->validationRules, $this->validationErrorMessages);
 
-        $editedData = $request->all();
         $selectedComic = Comic::Where("slug", $slug)->firstOrFail();
-        $selectedComic["slug"] = Str::slug($editedData["sale_date"] . " " . $editedData["title"], '-');
-        $selectedComic->update($editedData);
+        $selectedComic["slug"] = Str::slug($validatedData["sale_date"] . " " . $validatedData["title"], '-');
+        $selectedComic->update($validatedData);
 
         return redirect()->route("comics.index", $selectedComic->slug)->with("updated", $selectedComic->title);
 

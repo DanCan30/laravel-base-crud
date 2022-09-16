@@ -15,11 +15,11 @@ class ComicController extends Controller
      */
 
     protected $validationRules = [
-        "title" => "required|min:5|alpha_num",
+        "title" => "required|min:5",
         "description" => "min:5",
         "thumb" => "required|active_url",
         "price" => "required|numeric|between:1, 199.99",
-        "series" => "required|alpha_num|min:5|max:30",
+        "series" => "required|min:5|max:40",
         "sale_date" => "required|date|before:today",
         "type" => "required|exists:comics,type"
     ];
@@ -27,7 +27,6 @@ class ComicController extends Controller
     protected $validationErrorMessages = [
         "title.require" => "The title is necessary.",
         "title.min" => "The title must be at least 5 characters.",
-        "title.alpha_num" => "The title can contain only alphanumerical characters.",
         "description.min" => "The description is too short.",
         "thumb.require" => "The thumb is necessary.",
         "thumb.active_url" => "The thumb's URL is not valid.",
@@ -35,7 +34,6 @@ class ComicController extends Controller
         "price.numeric" => "Please insert only numbers.",
         "price.between" => "The price must be between 1 and 199.99€, for special/limited editions please contact the admins.",
         "series.require" => "The series is necessary.",
-        "series.alpha_num" => "The series can contain only alphanumerical characters.",
         "series.min" => "The series must be at least 5 characters.",
         "series.max" => "The series is too long.",
         "sale_date.required" => "Please select a sale date.",

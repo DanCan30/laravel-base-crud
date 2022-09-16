@@ -301,6 +301,12 @@ main form select {
   font-size: 1.5rem;
 }
 
+main div.displayed-error {
+  color: red;
+  font-style: italic;
+  padding-block: 0.5rem;
+}
+
 div.admin-button {
   padding-left: 2rem;
 }

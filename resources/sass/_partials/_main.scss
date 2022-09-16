@@ -293,6 +293,13 @@ main {
             font-size: 1.5rem;
         }
     }
+
+    // ERROR MESSAGES
+    div.displayed-error {
+        color: red;
+        font-style: italic;
+        padding-block: .5rem;
+    }
 }
 
 

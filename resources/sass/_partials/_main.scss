@@ -295,7 +295,8 @@ main {
     }
 
     // ERROR MESSAGES
-    div.displayed-error {
+    li.displayed-error {
+        list-style: none;
         color: red;
         font-style: italic;
         padding-block: .5rem;

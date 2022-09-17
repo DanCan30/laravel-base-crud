@@ -15,7 +15,7 @@ class ComicController extends Controller
      */
 
     protected $validationRules = [
-        "title" => "required|min:5",
+        "title" => "required|min:5|alpha_num",
         "description" => "min:5",
         "thumb" => "required|active_url",
         "price" => "required|numeric|between:1, 199.99",

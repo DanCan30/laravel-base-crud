@@ -5,5 +5,5 @@
 @section("main-content")
     <h2>Add a new comic</h2>
 
-    @include("admin.form", [$routeName = "comics.store", $HTTPMethod = "POST", $submitType = "Add"])
+    @include("includes.form", [$routeName = "comics.store", $HTTPMethod = "POST", $submitType = "Add"])
 @endsection
